@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <title>商城后台</title>
+</head>
+<body class="layui-layout layui-layout-admin">
+
+<div>
+    <ul>
+        <li><a id="liProduct" data-toggle="tab"
+               href="#tab-1">商品信息</a></li>
+    </ul>
+</div>
+<div>
+    <div id="tab-1">
+        <form name="form_productInfo" action="admin/product/productaddpost.jsp"
+              method="POST" onsubmit="return validate();" class = "layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">单行选择框</label>
+                <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao">
+                        <option value=""></option>
+                        <option value="0">写作</option>
+                        <option value="1" selected="">阅读</option>
+                        <option value="2">游戏</option>
+                        <option value="3">音乐</option>
+                        <option value="4">旅行</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    //Demo
+    layui.use(['form','layer'], function(){
+        var form = layui.form;
+        var layer = layui.layer;
+        //监听提交
+        //   form.on('submit(formDemo)', function(data){
+        //     layer.msg(JSON.stringify(data.field));
+        //     return false;
+        //   });
+    });
+</script>
+
+</body>
+</html>
